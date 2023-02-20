@@ -1,10 +1,10 @@
 *{
     margin: 0;
     padding: 0;
-    font-size: 25px;
 }
 body{
     margin-top: 60px;
+    background-color: Beige;
 }
 .container{
     margin: 0 auto;
@@ -22,12 +22,12 @@ body{
     padding: 7px 30px;
 }
 .menu{
-    font-size: 14px;
+    font-size: 17px;
     line-height: 1;
     padding: 0;
     margin: 0;
     display: inline-block;
-    color: #fffee8;
+    color: Yellow;
 }
 .menu li {
     display: inline-block;
@@ -35,18 +35,69 @@ body{
 .menu a {
     display: inline-block;
     text-decoration: none;
-    color: inherit;
+    color: Yellow;
     padding: 5px 15px;
 }
 .menu a:hover {
-    color: #ffc122;
+    color: White;
     text-decoration: underline;
 }
 .logo{
-    font-size: 14px;
+    font-size: 25px;
     line-height: 1;
     padding: 0;
     margin: 0;
+    margin-right: 385px;
     display: inline-block;
-    color: #fffee8;
+}
+.product_picture{
+    width: 130px;
+    height: 130px;
+}
+.product_image{
+    display: inline-block;
+    margin: 5px;
+    border: 2px solid black;
+}
+.product_info{
+    display: inline-block;
+    font-size: 25px;
+    margin-top: 5px;
+    vertical-align: top;
+}
+.product_block{
+    border: 2px solid black;
+    margin: 10px;
+    width: 500px;
+    display: inline-block;
+}
+.end_indent{
+    margin-top: 100px;
+}
+.product_picture_pk{
+    width: 500px;
+    height: 500px;
+}
+.product_image{
+    display: inline-block;
+    margin: 5px;
+    border: 2px solid black;
+}
+.product_info_pk{
+    display: inline-block;
+    font-size: 25px;
+    vertical-align: top;
+    margin-top: 5px;
+    margin-left: 20px;
+    height: 500px;
+    position: relative;
+}
+.product_block_pk{
+    width: 1000px;
+}
+.product_added{
+    font-size: 15px;
+    position: absolute;
+    bottom: 0;
+    width: 500px;
 }

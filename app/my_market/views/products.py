@@ -11,3 +11,9 @@ def products_view(request: WSGIRequest):
     }
     return render(request, 'products_list_page.html', context=context)
 
+
+def product_view(request, pk):
+    product = get_object_or_404(Products, pk=pk)
+    return render(request, 'product_print_page.html', context={
+        'product': product,
+    })

@@ -11,12 +11,18 @@
     <div class="container">
         <ul class="menu logo">
             <li>
-                {% block navbar_logo %}{% endblock %}
+                <a href="{% url 'products_list' %}">My market</a>
             </li>
         </ul>
         <ul class="menu">
             <li>
-                {% block navbar %}{% endblock %}
+                <a href="{% url 'products_list' %}">Products</a>
+            </li>
+            <li>
+                <a href="{% url 'products_list' %}">Add Product</a>
+            </li>
+            <li>
+                <a href="{% url 'products_list' %}">Add Category</a>
             </li>
         </ul>
     </div>

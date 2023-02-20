@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}Products List{% endblock %}
+{% block content %}
+<div class="product_block_pk">
+    <div class="product_image">
+        <img class="product_picture_pk" src="{{ product.picture }}" alt="product image - {{ product.title }}">
+    </div>
+    <div class="product_info_pk">
+        <div class="product_title">Title: {{ product.title }}</div>
+        <div class="product_category">Category: {{ product.category }}</div>
+        <div class="product_price">Price: {{ product.price }}</div>
+        <div class="product_description">{{ product.description }}</div>
+        <div class="product_added">Added: {{ product.created_at }}</div>
+    </div>
+</div>
+<div class="end_indent"></div>
+{% endblock %}

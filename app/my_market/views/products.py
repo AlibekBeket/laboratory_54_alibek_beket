@@ -1,6 +1,5 @@
 from django.core.handlers.wsgi import WSGIRequest
 from django.shortcuts import render, get_object_or_404, redirect
-from django.urls import reverse
 from my_market.models import *
 
 
@@ -36,5 +35,6 @@ def product_add_view(request: WSGIRequest):
         'category': product_category,
         'description': request.POST.get('description')
     }
-    Product.objects.create(**product_add)
-    return redirect(reverse('products_list'))
+    product = Product.objects.create(**product_add)
+    print(product.pk)
+    return redirect('/products/' + str(product.pk))

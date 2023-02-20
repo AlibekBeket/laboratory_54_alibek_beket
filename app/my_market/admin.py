@@ -12,7 +12,7 @@ class ProductsAdmin(admin.ModelAdmin):
     readonly_fields = ("id", "created_at")
 
 
-admin.site.register(Products, ProductsAdmin)
+admin.site.register(Product, ProductsAdmin)
 
 
 class CategoryAdmin(admin.ModelAdmin):

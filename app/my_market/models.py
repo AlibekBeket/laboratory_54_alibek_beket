@@ -10,7 +10,7 @@ class Category(models.Model):
         return f"{self.title}"
 
 
-class Products(models.Model):
+class Product(models.Model):
     title = models.CharField(max_length=200, null=False, blank=False, verbose_name="Наименование")
     description = models.TextField(max_length=1000, null=True, blank=True, verbose_name="Описание")
     category = models.ForeignKey(to='my_market.Category', null=False, blank=False, verbose_name="Категория", related_name="product", on_delete=models.RESTRICT)

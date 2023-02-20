@@ -5,5 +5,9 @@ from my_market.models import *
 
 
 def products_view(request: WSGIRequest):
-    return render(request, 'products_list_page.html')
+    products_list = Products.objects.all()
+    context = {
+        'products_list': products_list
+    }
+    return render(request, 'products_list_page.html', context=context)
 

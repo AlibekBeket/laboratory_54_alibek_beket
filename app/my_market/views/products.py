@@ -17,3 +17,24 @@ def product_view(request, pk):
     return render(request, 'product_print_page.html', context={
         'product': product,
     })
+
+def product_add_view(request: WSGIRequest):
+    if not request.POST:
+        categories = Category.objects.all()
+        context = {
+            'categories': categories
+        }
+        return render(request, 'product_add_page.html', context=context)
+    categories = Category.objects.all()
+    for category in categories:
+        if category.title == request.POST.get('category'):
+            product_category = category
+    product_add = {
+        'title': request.POST.get('title'),
+        'price': request.POST.get('price'),
+        'picture': request.POST.get('url_picture'),
+        'category': product_category,
+        'description': request.POST.get('description')
+    }
+    Product.objects.create(**product_add)
+    return redirect(reverse('products_list'))

@@ -101,3 +101,31 @@ body{
     bottom: 0;
     width: 500px;
 }
+.title_add_page{
+    margin-top: 90px;
+}
+.form{
+    font-size: 20px;
+}
+.form_row{
+    margin-top: 5px;
+}
+.form_row input{
+    width: 200px;
+}
+.form_row select{
+    width: 200px;
+}
+.form_row option{
+    width: 200px;
+}
+.description{
+    height: 150px;
+}
+.add_product{
+    width: 100px;
+    padding: 3px;
+    background-color: DodgerBlue;
+    color: White;
+    margin-left: 10px;
+}

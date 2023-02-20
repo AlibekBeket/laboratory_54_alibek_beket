@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %}Add Product{% endblock %}
+{% block content %}
+<h2 class="title_add_page">Add Product</h2>
+<div class="form">
+    <form action="{% url 'product_add' %}" method="post">
+        {% csrf_token %}
+        <div class="form_row">
+            <input placeholder="Title" required maxlength="200" type="text" name="title">
+        </div>
+        <div class="form_row">
+            <input placeholder="Price" required max="9999999999" type="number" name="price">
+        </div>
+        <div class="form_row">
+            <input placeholder="Image url" required type="url" name="url_picture">
+        </div>
+        <div class="form_row">
+            <select name="category">
+                {% for category in categories %}
+                <option value="{{ category.title }}">{{ category.title }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="form_row description">
+            <textarea placeholder="Description" maxlength="1000" rows="5" cols="24" name="description"></textarea>
+        </div>
+        <div class="form_row_add">
+            <input class="add_product" type="submit" value="Add product">
+        </div>
+    </form>
+</div>
+{% endblock %}

@@ -37,5 +37,4 @@ def product_add_view(request: WSGIRequest):
         'description': request.POST.get('description')
     }
     product = Product.objects.create(**product_add)
-    print(product.pk)
     return redirect('/products/' + str(product.pk))

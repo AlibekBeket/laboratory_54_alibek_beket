@@ -17,6 +17,7 @@ def product_view(request, pk):
         'product': product,
     })
 
+
 def product_add_view(request: WSGIRequest):
     if not request.POST:
         categories = Category.objects.all()
